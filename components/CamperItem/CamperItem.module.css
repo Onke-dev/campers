@@ -1,0 +1,87 @@
+.card {
+  display: flex;
+  border-radius: 16px;
+  padding: 24px;
+  width: 888px;
+  height: 312px;
+  background: var(--inputs);
+}
+
+.img {
+  border-radius: 16px;
+}
+
+.wrap_info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+  padding-right: 73px;
+}
+
+.wrap_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 8px;
+}
+
+.title_card {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  color: var(--main);
+}
+
+.info_car {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  column-gap: 16px;
+  /* padding-bottom: 24px; */
+}
+
+.detail_card {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--main);
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+}
+
+.description {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text);
+  /* padding-bottom: 24px; */
+}
+
+.btn {
+  border-radius: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 173px;
+  height: 56px;
+  background: var(--grey-green);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: var(--white);
+}
