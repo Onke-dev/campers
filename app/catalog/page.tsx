@@ -1,16 +1,5 @@
-import CamperList from '@/components/CamperList/CamperList';
-import { getCampers } from '../lib/api/clientApi';
+import Catalog from '@/components/Catalog/Catalog';
 
-const Campers = async () => {
-  const response = await getCampers();
-
-  return (
-    <section>
-      {response?.campers?.length > 0 && (
-        <CamperList campers={response.campers} />
-      )}
-    </section>
-  );
-};
+const Campers = () => <Catalog />;
 
 export default Campers;

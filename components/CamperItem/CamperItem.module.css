@@ -91,6 +91,7 @@
   line-height: 150%;
   text-align: center;
   color: var(--main);
+  text-transform: capitalize;
 }
 
 .icon {

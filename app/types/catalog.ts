@@ -1,3 +1,5 @@
+import { GalleryImage } from "./gallery";
+
 export interface Camper {
   id: string;
   name: string;
@@ -13,17 +15,8 @@ export interface Camper {
   consumption: string;
   transmission: string;
   engine: string;
-  amenities: [
-    'ac',
-    'bathroom',
-    'kitchen',
-    'tv',
-    'radio',
-    'refrigerator',
-    'microwave',
-    'gas',
-    'water',
-  ];
+  amenities: string[];
   coverImage: string;
+  gallery?: GalleryImage[];
   totalReviews: number;
 }

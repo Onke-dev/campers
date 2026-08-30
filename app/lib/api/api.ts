@@ -1,16 +1,30 @@
-import { Camper} from '@/app/types/catalog';
+import { Camper } from '@/app/types/catalog';
 import axios from 'axios';
 
 export interface CampersListResponse {
+  page: number;
+  perPage: number;
   campers: Camper[];
   total: number;
   totalPages: number;
 }
 
-export interface FetchCampersParams {
-  search: string;
+export interface CamperFilters {
+  location: string;
+  form: string;
+  engine: string;
+  transmission: string;
+}
+
+export interface FetchCampersParams extends Partial<CamperFilters> {
   page: number;
-  tag?: string;
+  perPage: number;
+}
+
+export interface AvailableFilters {
+  forms: string[];
+  engines: string[];
+  transmissions: string[];
 }
 
 export const baseURL =
