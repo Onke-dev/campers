@@ -7,8 +7,9 @@ import { FaRegMap } from 'react-icons/fa';
 
 type Props = {
   item: Camper;
+  isLcpImage?: boolean;
 };
-const CamperItem = ({ item }: Props) => {
+const CamperItem = ({ item, isLcpImage = false }: Props) => {
   return (
     <li className={css.card}>
       <Image
@@ -17,6 +18,7 @@ const CamperItem = ({ item }: Props) => {
         alt={item.name}
         width={219}
         height={240}
+        loading={isLcpImage ? 'eager' : 'lazy'}
       />
       <div className={css.wrap_info}>
         <div className={css.wrap_title}>
@@ -26,7 +28,8 @@ const CamperItem = ({ item }: Props) => {
         <div className={css.info_car}>
           <div className={css.details}>
             <p className={css.detail_card}>
-              <FaStar /> {item.rating}({item.totalReviews} Reviews)
+              <FaStar color="#FFC531" /> {item.rating}({item.totalReviews}{' '}
+              Reviews)
             </p>
             <p className={css.detail_card}>
               <FaRegMap />
@@ -35,9 +38,24 @@ const CamperItem = ({ item }: Props) => {
           </div>
           <p className={css.description}>{item.description}</p>
           <div className={css.items_car}>
-            <span className={css.item}>{item.engine}</span>
-            <span className={css.item}>{item.transmission}</span>
-            <span className={css.item}>{item.form}</span>
+            <span className={css.item}>
+              <svg className={css.icon} aria-label="Engine of car">
+                <use href="/sprite.svg#icon-engine"></use>
+              </svg>
+              {item.engine}
+            </span>
+            <span className={css.item}>
+              <svg className={css.icon} aria-label="Transmission of car">
+                <use href="/sprite.svg#icon-transmission"></use>
+              </svg>
+              {item.transmission}
+            </span>
+            <span className={css.item}>
+              <svg className={css.icon} aria-label="Form of car">
+                <use href="/sprite.svg#icon-form"></use>
+              </svg>
+              {item.form}
+            </span>
           </div>
           <Link href="/" className={css.btn}>
             Show more

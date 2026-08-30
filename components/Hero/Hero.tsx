@@ -9,7 +9,7 @@ const Hero = () => {
         <p className={css.description}>
           You can find everything you want in our catalog
         </p>
-        <Link href="#" className={css.btn}>
+        <Link href="/catalog" className={css.btn}>
           View Now
         </Link>
       </div>

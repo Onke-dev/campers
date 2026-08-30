@@ -9,8 +9,8 @@ type Props = {
 const CamperList = ({ campers }: Props) => {
   return (
     <ul className={css.list}>
-      {campers.map((camper) => (
-        <CamperItem key={camper.id} item={camper} />
+      {campers.map((camper, index) => (
+        <CamperItem key={camper.id} item={camper} isLcpImage={index === 0} />
       ))}
     </ul>
   );
