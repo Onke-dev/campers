@@ -57,7 +57,12 @@ const CamperItem = ({ item, isLcpImage = false }: Props) => {
               {item.form}
             </span>
           </div>
-          <Link href={`/catalog/${item.id}`} className={css.btn}>
+          <Link
+            href={`/catalog/${item.id}`}
+            className={css.btn}
+            target="_blank"
+            rel="noreferrer"
+          >
             Show more
           </Link>
         </div>
