@@ -1,0 +1,36 @@
+.imgs {
+  width: 638px;
+  height: 676px;
+  flex-shrink: 0;
+}
+
+.main_swiper {
+  width: 100%;
+  height: 505px;
+  border-radius: 17px;
+  overflow: hidden;
+}
+
+.main_image,
+.thumb_image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbs_swiper {
+  width: 100%;
+  height: 144px;
+  margin-top: 16px;
+}
+
+.thumbs_swiper :global(.swiper-slide) {
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.thumbs_swiper :global(.swiper-slide-thumb-active) {
+  border: 3px solid var(--grey-green);
+}
